@@ -212,7 +212,8 @@
         {
             "name": "Transbus-Buzău",
             "type": "mobility-database",
-            "mdb-id": "mdb-2106"
+            "mdb-id": "mdb-2106",
+            "fix": true
         },
         {
             "name": "Transbus-Buzău",
