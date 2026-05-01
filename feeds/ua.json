@@ -41,7 +41,8 @@
             "name": "uzhhorod",
             "type": "mobility-database",
             "mdb-id": "mdb-2931",
-            "extend-calendar": true
+            "extend-calendar": true,
+            "fix": true
         },
         {
             "name": "odesa",
@@ -76,7 +77,8 @@
                 "headers": {
                     "ApiKey": "a8c6d35e-f2c1-4f72-b902-831fa9215009"
                 }
-            }
+            },
+            "fix": true
         },
         {
             "name": "bucha",
@@ -212,6 +214,11 @@
             "url": "https://city.dozor.tech/uzhgorod/gtfs/trip_updates",
             "skip": true,
             "skip-reason": "static feed skipped"
+        },
+        {
+            "name": "vdexpress",
+            "type": "http",
+            "url": "https://vdexpress.net/api/gtfs/feed"
         }
     ]
 }
