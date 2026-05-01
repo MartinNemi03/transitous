@@ -84,6 +84,14 @@
             "type": "mobility-database",
             "mdb-id": "mdb-2120",
             "spec": "gtfs-rt"
+        },
+        {
+            "name": "aytos",
+            "type": "http",
+            "url": "https://transport.aytos.bg/gtfs/AytosGTFS.zip",
+            "license": {
+                "spdx-identifier": "CC-BY-4.0"
+            }
         }
     ]
 }
