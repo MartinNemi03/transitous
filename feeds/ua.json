@@ -42,7 +42,9 @@
             "type": "mobility-database",
             "mdb-id": "mdb-2931",
             "extend-calendar": true,
-            "fix": true
+            "fix": true,
+            "skip": true,
+            "skip-reason": "End date before start date"
         },
         {
             "name": "odesa",
