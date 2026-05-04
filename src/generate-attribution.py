@@ -13,7 +13,7 @@ import pycountry
 from pathlib import Path
 from metadata import TransitlandSource, MobilityDatabaseSource, Region, UrlSource, HttpSource
 from zipfile import ZipFile
-from typing import Optional
+from typing import Optional, Any
 from datetime import datetime, timezone
 
 
@@ -45,6 +45,8 @@ def http_source_attribution(source: HttpSource, source_id: str, region_data: dic
             source.license.spdx_identifier
     if source.license.url:
         attribution["license_url"] = source.license.url
+    if source.license.attribution_text:
+        attribution["attribution_text"] = source.license.attribution_text
 
     attribution["operators"] = []
     attribution["source"] = source.url
@@ -133,6 +135,11 @@ def http_source_attribution(source: HttpSource, source_id: str, region_data: dic
                 list(filter(lambda c: c.get("email") or c.get("url"),
                             contacts))
 
+    if source.license.publisher:
+        attribution["publisher"] = {}
+        attribution["publisher"]["name"] = source.license.publisher
+        attribution["publisher"]["url"] = source.license.publisher_url
+
     if (
         "operators" in attribution
         and len(attribution["operators"]) == 1
@@ -147,11 +154,20 @@ def add_rt_attribution(attribution: dict, source: UrlSource) -> None:
     if "rt" not in attribution:
         attribution["rt"] = []
 
-    attribution["rt"].append({
+    rt_attribution: dict[str, Any] = {
             "source": source.url,
             "spdx_license_identifier": source.license.spdx_identifier,
-            "license_url": source.license.url
-    })
+            "license_url": source.license.url,
+            "attribution_text": source.license.attribution_text,
+    }
+
+    if source.license.publisher:
+        rt_attribution["publisher"] = {
+                "name": source.license.publisher,
+                "url": source.license.publisher_url
+        }
+
+    attribution["rt"].append(rt_attribution)
 
 
 def get_region_data(code: str) -> dict:

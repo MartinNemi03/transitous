@@ -89,6 +89,10 @@ summary h3 {
     </p>
   {{ end }}
 
+  {{ if $source.attribution_text }}
+  <p>{{ $source.attribution_text }}</p>
+  {{ end }}
+
   {{ if $source.last_updated }}
     <p>
     The data was last updated at {{ time.Format "02 Jan 06 15:04 UTC" $source.last_updated }}.
@@ -121,6 +125,19 @@ summary h3 {
       <a href="https://spdx.org/licenses/{{ $rt_source.spdx_license_identifier }}.html">{{ $rt_source.spdx_license_identifier }}</a>
       {{ end }}
     {{- end }}.
+
+    {{ if $rt_source.publisher }}
+      It is published by
+      {{ if $rt_source.publisher.url }}
+      <a href="{{ $rt_source.publisher.url }}">{{ $rt_source.publisher.name }}</a>.
+      {{ else }}
+      {{ $rt_source.publisher.name }}.
+      {{ end }}
+    {{ end }}
+
+    {{ if $rt_source.attribution_text }}
+    {{ $rt_source.attribution_text }}
+    {{ end }}
     </p>
     {{ end }}
   {{ end }}
