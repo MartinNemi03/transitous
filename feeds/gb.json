@@ -36,7 +36,7 @@
         {
             "name": "northern-ireland",
             "type": "http",
-            "url": "https://s3.transitpdf.com/files/uran/improved-gtfs-northern-ireland.zip"
+            "url": "https://blues3.transitpdf.com/files/sourcedata/northern-ireland.zip"
         },
         {
             "name": "flixbus",
