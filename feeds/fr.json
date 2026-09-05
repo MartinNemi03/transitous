@@ -1506,22 +1506,6 @@
             "x-data-gov-fr-dataset-id": "5bf52498634f410a498457b6"
         },
         {
-            "name": "donnees-tcat-troyes-champagne-metropole-1",
-            "type": "url",
-            "url": "https://www.data.gouv.fr/api/1/datasets/r/79151f50-b842-4fa9-a4b5-046c0029417b",
-            "fix": true,
-            "license": {
-                "url": "https://transport.data.gouv.fr/datasets/donnees-tcat-troyes-champagne-metropole-1",
-                "spdx-identifier": "ODbL-1.0"
-            },
-            "x-data-gov-fr-res-id": 79747,
-            "managed-by-script": true,
-            "skip": false,
-            "x-data-gov-fr-res-title": "gtfs.zip",
-            "x-data-gov-fr-dataset-id": "5c0933e88b4c4177a394acd1",
-            "spec": "gtfs-rt"
-        },
-        {
             "name": "donnees-tcat-troyes-champagne-metropole-1--79847",
             "type": "http",
             "url": "https://transport.data.gouv.fr/resources/79847/download",
@@ -1535,6 +1519,20 @@
             "skip": true,
             "skip-reason": "Same data but outdated",
             "x-data-gov-fr-res-title": "gtfs-navineo.zip",
+            "x-data-gov-fr-dataset-id": "5c0933e88b4c4177a394acd1"
+        },
+        {
+            "name": "donnees-tcat-troyes-champagne-metropole-1",
+            "type": "http",
+            "url": "https://www.data.gouv.fr/api/1/datasets/r/79151f50-b842-4fa9-a4b5-046c0029417b",
+            "fix": true,
+            "license": {
+                "url": "https://transport.data.gouv.fr/datasets/donnees-tcat-troyes-champagne-metropole-1",
+                "spdx-identifier": "ODbL-1.0"
+            },
+            "x-data-gov-fr-res-id": 79747,
+            "managed-by-script": false,
+            "x-data-gov-fr-res-title": "gtfs.zip",
             "x-data-gov-fr-dataset-id": "5c0933e88b4c4177a394acd1"
         },
         {
@@ -1701,20 +1699,6 @@
         },
         {
             "name": "offre-transport-en-commun-du-reseau-transpor-gtfs",
-            "type": "url",
-            "url": "https://proxy.transport.data.gouv.fr/resource/transpor-gtfs-rt-trip-update",
-            "license": {
-                "url": "https://transport.data.gouv.fr/datasets/offre-transport-en-commun-du-reseau-transpor-gtfs",
-                "spdx-identifier": "etalab-2.0"
-            },
-            "spec": "gtfs-rt",
-            "x-data-gov-fr-res-id": 81926,
-            "managed-by-script": true,
-            "x-data-gov-fr-res-title": "Mise à jour des trajets en temps réel (GTFS-RT)",
-            "x-data-gov-fr-dataset-id": "5c419aaa8b4c4144b27a82f3"
-        },
-        {
-            "name": "offre-transport-en-commun-du-reseau-transpor-gtfs",
             "type": "http",
             "url": "https://www.data.gouv.fr/api/1/datasets/r/84a0902b-ed56-4a09-8eb7-bb58601ba084",
             "fix": true,
@@ -1726,6 +1710,20 @@
             "x-data-gov-fr-dataset-id": "5c419aaa8b4c4144b27a82f3",
             "x-data-gov-fr-res-title": "Horaires hivernaux 2026",
             "managed-by-script": true
+        },
+        {
+            "name": "offre-transport-en-commun-du-reseau-transpor-gtfs",
+            "type": "url",
+            "url": "https://proxy.transport.data.gouv.fr/resource/transpor-gtfs-rt-trip-update",
+            "license": {
+                "url": "https://transport.data.gouv.fr/datasets/offre-transport-en-commun-du-reseau-transpor-gtfs",
+                "spdx-identifier": "etalab-2.0"
+            },
+            "spec": "gtfs-rt",
+            "x-data-gov-fr-res-id": 81926,
+            "managed-by-script": true,
+            "x-data-gov-fr-res-title": "Mise à jour des trajets en temps réel (GTFS-RT)",
+            "x-data-gov-fr-dataset-id": "5c419aaa8b4c4144b27a82f3"
         },
         {
             "name": "reseau-ruban",
@@ -2606,7 +2604,7 @@
             "x-data-gov-fr-dataset-id": "5de42c4d8b4c417a10e62ec9",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "horaires-theoriques-du-reseau-transports-en-commun-lyonnais",
@@ -2622,7 +2620,7 @@
             "x-data-gov-fr-dataset-id": "5de42c4d8b4c417a10e62ec9",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "horaires-theoriques-du-reseau-transports-en-commun-lyonnais",
@@ -2638,7 +2636,7 @@
             "x-data-gov-fr-dataset-id": "5de42c4d8b4c417a10e62ec9",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "horaires-theoriques-et-temps-reel-du-reseau-transports-urbains-mendois-mende-gtfs-gtfs-rt",
@@ -2768,9 +2766,10 @@
             },
             "x-data-gov-fr-res-id": 12616,
             "managed-by-script": true,
-            "skip": false,
+            "skip": true,
             "x-data-gov-fr-res-title": "Horaires théoriques de la station de ski Valmorel (GTFS)",
-            "x-data-gov-fr-dataset-id": "5e3c29156f444172fa4ec754"
+            "x-data-gov-fr-dataset-id": "5e3c29156f444172fa4ec754",
+            "skip-reason": "Feed is empty, timezone missing as well"
         },
         {
             "name": "horaires-theoriques-et-temps-reel-de-la-station-de-ski-valmorel-gtfs-gtfs-rt",
@@ -2784,7 +2783,9 @@
             "x-data-gov-fr-res-id": 12617,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Horaires temps-réel de la station de ski Valmorel (GTFS-RT)",
-            "x-data-gov-fr-dataset-id": "5e3c29156f444172fa4ec754"
+            "x-data-gov-fr-dataset-id": "5e3c29156f444172fa4ec754",
+            "skip": true,
+            "skip-reason": "static feed skipped"
         },
         {
             "name": "evolity-horaires-theoriques-de-transport-public",
@@ -3264,7 +3265,9 @@
             "x-data-gov-fr-res-id": 84076,
             "x-data-gov-fr-dataset-id": "5f2c9a79e4e713875a58be26",
             "x-data-gov-fr-res-title": "Données du réseau Mobigo dans le Jura - 39",
-            "managed-by-script": true
+            "managed-by-script": true,
+            "skip": true,
+            "skip-reason": "zip in zip with unpredictable name"
         },
         {
             "name": "reseau-de-transport-interurbain-mobigo-en-bourgogne-franche-comte--84077",
@@ -3324,21 +3327,7 @@
             "x-data-gov-fr-dataset-id": "5f3b576ef388432cf6071cc6"
         },
         {
-            "name": "horaires-theoriques-du-reseau-maelis-montlucon-communaute-gtfs",
-            "type": "url",
-            "url": "https://proxy.transport.data.gouv.fr/resource/maelis-montlucon-gtfs-rt-trip-update",
-            "x-data-gov-fr-res-title": "Maelis Montluçon - GTFS-RT-Trip",
-            "license": {
-                "url": "https://transport.data.gouv.fr/datasets/horaires-theoriques-et-reel-du-reseau-maelis-montlucon-communaute-gtfs",
-                "spdx-identifier": "ODbL-1.0"
-            },
-            "spec": "gtfs-rt",
-            "x-data-gov-fr-res-id": 84016,
-            "x-data-gov-fr-dataset-id": "5f3e9f003caad471591e541f",
-            "managed-by-script": true
-        },
-        {
-            "name": "horaires-theoriques-et-reel-du-reseau-maelis-montlucon-communaute-gtfs--84065",
+            "name": "horaires-theoriques-et-reel-du-reseau-maelis-montlucon-communaute-gtfs",
             "type": "http",
             "url": "https://www.data.gouv.fr/api/1/datasets/r/4b0bc62d-0854-4ddb-b703-0882e5ad5981",
             "fix": true,
@@ -3349,6 +3338,20 @@
             "x-data-gov-fr-res-id": 84065,
             "x-data-gov-fr-dataset-id": "5f3e9f003caad471591e541f",
             "x-data-gov-fr-res-title": "GTFS mis à jour",
+            "managed-by-script": true
+        },
+        {
+            "name": "horaires-theoriques-et-reel-du-reseau-maelis-montlucon-communaute-gtfs",
+            "type": "url",
+            "url": "https://proxy.transport.data.gouv.fr/resource/maelis-montlucon-gtfs-rt-trip-update",
+            "x-data-gov-fr-res-title": "Maelis Montluçon - GTFS-RT-Trip",
+            "license": {
+                "url": "https://transport.data.gouv.fr/datasets/horaires-theoriques-et-reel-du-reseau-maelis-montlucon-communaute-gtfs",
+                "spdx-identifier": "ODbL-1.0"
+            },
+            "spec": "gtfs-rt",
+            "x-data-gov-fr-res-id": 84016,
+            "x-data-gov-fr-dataset-id": "5f3e9f003caad471591e541f",
             "managed-by-script": true
         },
         {
@@ -3363,7 +3366,9 @@
             "x-data-gov-fr-res-id": 84114,
             "x-data-gov-fr-dataset-id": "5f3e9f003caad471591e541f",
             "x-data-gov-fr-res-title": "GTFS théorique 31/08/26 au 03/01/2027",
-            "managed-by-script": true
+            "managed-by-script": true,
+            "skip": true,
+            "skip-reason": "We use 84065 instead"
         },
         {
             "name": "horaires-theoriques-du-reseau-transport-du-pays-voironnais",
@@ -6280,9 +6285,9 @@
             },
             "x-data-gov-fr-res-id": 82907,
             "managed-by-script": true,
-            "skip": true,
             "x-data-gov-fr-res-title": "Horaires théoriques de la navette de Sel et Vermois (GTFS)",
             "x-data-gov-fr-dataset-id": "63b4c3d206d317f5caa80dcc",
+            "skip": true,
             "skip-reason": "Feed is expired according to metadata"
         },
         {
@@ -6297,7 +6302,9 @@
             "x-data-gov-fr-res-id": 82910,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Horaires temps réel des lignes du réseau de la Communauté de Communes des Pays du Sel et du Vermois",
-            "x-data-gov-fr-dataset-id": "63b4c3d206d317f5caa80dcc"
+            "x-data-gov-fr-dataset-id": "63b4c3d206d317f5caa80dcc",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "fr-200052264-t0002-0000-1",
@@ -6486,9 +6493,9 @@
             },
             "x-data-gov-fr-res-id": 82413,
             "managed-by-script": true,
-            "skip": true,
             "x-data-gov-fr-res-title": "Horaires théoriques du réseau Transavold (GTFS)",
             "x-data-gov-fr-dataset-id": "63b4c3d25a09dd67fc9dde9a",
+            "skip": true,
             "skip-reason": "Feed is expired according to metadata"
         },
         {
@@ -6503,7 +6510,9 @@
             "x-data-gov-fr-res-id": 82595,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Horaires temps réel des lignes du réseau Transavold ",
-            "x-data-gov-fr-dataset-id": "63b4c3d25a09dd67fc9dde9a"
+            "x-data-gov-fr-dataset-id": "63b4c3d25a09dd67fc9dde9a",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "offre-de-transport-du-reseau-fluo-grand-est-aube-10",
@@ -6930,9 +6939,9 @@
             },
             "x-data-gov-fr-res-id": 80453,
             "managed-by-script": true,
-            "skip": true,
             "x-data-gov-fr-res-title": "Horaires théoriques du réseau Sylvia (CA de Saint-Dié-des-Vosges) - GTFS",
             "x-data-gov-fr-dataset-id": "63b4c3d355130e7bb19dde9d",
+            "skip": true,
             "skip-reason": "Feed is expired according to metadata"
         },
         {
@@ -6947,7 +6956,9 @@
             "x-data-gov-fr-res-id": 81166,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Horaires temps réel des lignes du réseau SYLVIA",
-            "x-data-gov-fr-dataset-id": "63b4c3d355130e7bb19dde9d"
+            "x-data-gov-fr-dataset-id": "63b4c3d355130e7bb19dde9d",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "fr-200052264-t0016-0000-1",
@@ -6961,7 +6972,9 @@
             "x-data-gov-fr-res-id": 81168,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Info trafic en temps réel du réseau  SYLVIA",
-            "x-data-gov-fr-dataset-id": "63b4c3d355130e7bb19dde9d"
+            "x-data-gov-fr-dataset-id": "63b4c3d355130e7bb19dde9d",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "offre-de-transport-du-reseau-elsa-petr-selestat-alsace-centrale",
@@ -7096,20 +7109,6 @@
         },
         {
             "name": "noirmoutier-gratibus-gtfs-gtfs-rt",
-            "type": "url",
-            "url": "https://www.data.gouv.fr/api/1/datasets/r/e3f2ac4c-758b-4dbd-9854-aa4d95c27d16",
-            "x-data-gov-fr-res-title": "GTFS-RT GRATIBUS Flux en temps réel",
-            "license": {
-                "url": "https://transport.data.gouv.fr/datasets/noirmoutier-gratibus-gtfs-gtfs-rt",
-                "spdx-identifier": "etalab-2.0"
-            },
-            "spec": "gtfs-rt",
-            "x-data-gov-fr-res-id": 80382,
-            "managed-by-script": true,
-            "x-data-gov-fr-dataset-id": "63b53e19a1e9838a8de38bde"
-        },
-        {
-            "name": "noirmoutier-gratibus-gtfs-gtfs-rt",
             "type": "http",
             "url": "https://www.data.gouv.fr/api/1/datasets/r/05625beb-8d5c-4996-a826-253dc6599a19",
             "fix": true,
@@ -7121,6 +7120,20 @@
             "x-data-gov-fr-dataset-id": "63b53e19a1e9838a8de38bde",
             "x-data-gov-fr-res-title": "GTFS GRATIBUS",
             "managed-by-script": true
+        },
+        {
+            "name": "noirmoutier-gratibus-gtfs-gtfs-rt",
+            "type": "url",
+            "url": "https://www.data.gouv.fr/api/1/datasets/r/e3f2ac4c-758b-4dbd-9854-aa4d95c27d16",
+            "x-data-gov-fr-res-title": "GTFS-RT GRATIBUS Flux en temps réel",
+            "license": {
+                "url": "https://transport.data.gouv.fr/datasets/noirmoutier-gratibus-gtfs-gtfs-rt",
+                "spdx-identifier": "etalab-2.0"
+            },
+            "spec": "gtfs-rt",
+            "x-data-gov-fr-res-id": 80382,
+            "managed-by-script": true,
+            "x-data-gov-fr-dataset-id": "63b53e19a1e9838a8de38bde"
         },
         {
             "name": "gtfs-move-vendome",
@@ -7343,7 +7356,7 @@
             "x-data-gov-fr-dataset-id": "63da9677e47cfa0836c459e5",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "gtfs-urbain-de-la-zone-nord-cap-nord",
@@ -7359,7 +7372,7 @@
             "x-data-gov-fr-dataset-id": "63da9677e47cfa0836c459e5",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "gtfs-urbain-de-la-zone-nord-cap-nord",
@@ -7375,7 +7388,7 @@
             "x-data-gov-fr-dataset-id": "63da9677e47cfa0836c459e5",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "transurbain-evreux-portes-de-normandie",
@@ -8036,9 +8049,9 @@
             },
             "x-data-gov-fr-res-id": 82148,
             "managed-by-script": true,
-            "skip": true,
             "x-data-gov-fr-res-title": "gtfs-citea-sept2024.zip",
             "x-data-gov-fr-dataset-id": "649c3cc8d773e2df916455c7",
+            "skip": true,
             "skip-reason": "Feed is expired according to metadata"
         },
         {
@@ -8053,7 +8066,9 @@
             "x-data-gov-fr-res-id": 83117,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Trip Update",
-            "x-data-gov-fr-dataset-id": "649c3cc8d773e2df916455c7"
+            "x-data-gov-fr-dataset-id": "649c3cc8d773e2df916455c7",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "ce-jeu-de-donnees-contient-la-liste-des-arrets-des-horaires-et-des-parcours-theoriques-du-reseau-de-transport-urbain-et-interurbain-de-vrm",
@@ -8067,7 +8082,9 @@
             "x-data-gov-fr-res-id": 83119,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "Service Alert",
-            "x-data-gov-fr-dataset-id": "649c3cc8d773e2df916455c7"
+            "x-data-gov-fr-dataset-id": "649c3cc8d773e2df916455c7",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "donnees-theoriques-et-temps-reel",
@@ -8657,9 +8674,9 @@
             },
             "x-data-gov-fr-res-id": 82166,
             "managed-by-script": true,
-            "skip": true,
             "x-data-gov-fr-res-title": "GTFS TAC - Réseau de transport de Grand-Châtellerault - 20/10/25 au 05/07/26",
             "x-data-gov-fr-dataset-id": "64ff1cfa864a499875d3340b",
+            "skip": true,
             "skip-reason": "Feed is expired according to metadata"
         },
         {
@@ -8674,7 +8691,9 @@
             "x-data-gov-fr-res-id": 81285,
             "managed-by-script": true,
             "x-data-gov-fr-res-title": "GTFS-RT",
-            "x-data-gov-fr-dataset-id": "64ff1cfa864a499875d3340b"
+            "x-data-gov-fr-dataset-id": "64ff1cfa864a499875d3340b",
+            "skip": true,
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "fichier-gtfs-des-transports-urbains-de-la-communaute-dagglomeration-du-puy-en-velay--83905",
@@ -9497,7 +9516,7 @@
             "x-data-gov-fr-res-id": 81874,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "expired",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-dataset-id": "661d39eba5540fa8302775f4"
         },
         {
@@ -9529,7 +9548,7 @@
             "x-data-gov-fr-res-id": 81871,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "expired",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-dataset-id": "661d3affc04519600e724d35"
         },
         {
@@ -9561,7 +9580,7 @@
             "x-data-gov-fr-res-id": 81868,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "Feed is expired",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-dataset-id": "661d3b938d126edb94a5651a"
         },
         {
@@ -9593,7 +9612,7 @@
             "x-data-gov-fr-res-id": 81864,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-dataset-id": "661d3c0217bc4d76ad259501"
         },
         {
@@ -9625,7 +9644,7 @@
             "x-data-gov-fr-res-id": 81861,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-dataset-id": "661d3cbfa35bc3e55f2af2ba"
         },
         {
@@ -9656,7 +9675,7 @@
             "x-data-gov-fr-res-id": 81859,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is expired",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-res-title": "Données mobilité Navette estivale Le Rayol Canadel",
             "x-data-gov-fr-dataset-id": "661d3d4348c87b1e3adf073f"
         },
@@ -9690,7 +9709,7 @@
             "x-data-gov-fr-dataset-id": "661d3dbba7761a7116a4bccd",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "golfe-de-saint-tropez-donnees-mobilite-tc-navette-reguliere-saint-tropez",
@@ -9722,7 +9741,7 @@
             "x-data-gov-fr-dataset-id": "661d3e51b528171284b515f7",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "offre-de-transport-tam-urbain",
@@ -9854,20 +9873,6 @@
         },
         {
             "name": "horaires-theoriques-du-reseau-tgl",
-            "type": "url",
-            "url": "https://proxy.transport.data.gouv.fr/resource/tgl-longwy-gtfs-rt-trip-update",
-            "license": {
-                "url": "https://transport.data.gouv.fr/datasets/horaires-theoriques-du-reseau-tgl",
-                "spdx-identifier": "etalab-2.0"
-            },
-            "spec": "gtfs-rt",
-            "x-data-gov-fr-res-id": 81987,
-            "managed-by-script": true,
-            "x-data-gov-fr-res-title": "Temps réel TGL au format GTFS-RT",
-            "x-data-gov-fr-dataset-id": "664f4eefa1d5dcbfa43655d9"
-        },
-        {
-            "name": "horaires-theoriques-du-reseau-tgl",
             "type": "http",
             "url": "https://www.data.gouv.fr/api/1/datasets/r/4f11e16d-e326-44fe-b18a-d83e7d041806",
             "fix": true,
@@ -9879,6 +9884,20 @@
             "x-data-gov-fr-dataset-id": "664f4eefa1d5dcbfa43655d9",
             "x-data-gov-fr-res-title": "Septembre-2026",
             "managed-by-script": true
+        },
+        {
+            "name": "horaires-theoriques-du-reseau-tgl",
+            "type": "url",
+            "url": "https://proxy.transport.data.gouv.fr/resource/tgl-longwy-gtfs-rt-trip-update",
+            "license": {
+                "url": "https://transport.data.gouv.fr/datasets/horaires-theoriques-du-reseau-tgl",
+                "spdx-identifier": "etalab-2.0"
+            },
+            "spec": "gtfs-rt",
+            "x-data-gov-fr-res-id": 81987,
+            "managed-by-script": true,
+            "x-data-gov-fr-res-title": "Temps réel TGL au format GTFS-RT",
+            "x-data-gov-fr-dataset-id": "664f4eefa1d5dcbfa43655d9"
         },
         {
             "name": "tilt-lannion-tregor-communaute",
@@ -9982,7 +10001,7 @@
             "x-data-gov-fr-dataset-id": "6661b213e00b47a6f617e471",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "reseau-rtca",
@@ -9998,7 +10017,7 @@
             "x-data-gov-fr-dataset-id": "6661b213e00b47a6f617e471",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "name": "offre-et-temps-reel-du-service-velos-en-libre-service-naolib-de-nantes-metropole-au-format-gbfs",
@@ -11981,7 +12000,7 @@
             "x-data-gov-fr-dataset-id": "678d0721a9efa066b6eed606",
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "static feed is skipped"
+            "skip-reason": "Feed is expired according to metadata"
         },
         {
             "type": "url",
@@ -12864,7 +12883,7 @@
             "x-data-gov-fr-res-id": 83190,
             "managed-by-script": true,
             "skip": true,
-            "skip-reason": "expired",
+            "skip-reason": "Feed is expired according to metadata",
             "x-data-gov-fr-dataset-id": "6852e92885e530ede69c6816"
         },
         {

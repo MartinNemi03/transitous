@@ -95,7 +95,8 @@ if __name__ == "__main__":
                     source["license"]["spdx-identifier"] = get_spdx_identifier(dataset["licence"])
 
                 if resource["id"] in id_map:
-                    id_map[resource["id"]].update(source)
+                    if id_map[resource["id"]]["managed-by-script"]:
+                        id_map[resource["id"]].update(source)
                 else:
                     new = {"name": source_name}
                     new.update(source)
@@ -145,16 +146,22 @@ if __name__ == "__main__":
                 }
 
                 expired = "metadata" in resource and "end_date" and "end_date" in resource["metadata"] and resource["metadata"]["end_date"] and datetime.strptime(resource["metadata"]["end_date"], '%Y-%m-%d') < (datetime.now()-timedelta(days=0))
-                if expired:
-                    source["skip"] = True
-                    source["skip-reason"] = "Feed is expired according to metadata"
                 if "page_url" in dataset:
                     source["license"]["url"] = dataset["page_url"]
                 if "licence" in dataset:
                     source["license"]["spdx-identifier"] = get_spdx_identifier(dataset["licence"])
 
                 if resource["id"] in id_map:
-                    id_map[resource["id"]].update(source)
+                    if id_map[resource["id"]]["managed-by-script"]:
+                        id_map[resource["id"]].update(source)
+
+                        # mark all related feeds as skipped
+                        if expired:
+                            for feed in region["sources"]:
+                                if feed["name"] == id_map[resource["id"]]["name"]:
+                                    feed["skip"] = True
+                                    feed["skip-reason"] = "Feed is expired according to metadata"
+
                 else:
                     new = {
                         "name": source_name
@@ -213,7 +220,8 @@ if __name__ == "__main__":
                     source["license"]["spdx-identifier"] = get_spdx_identifier(dataset["licence"])
 
                 if resource["id"] in id_map:
-                    id_map[resource["id"]].update(source)
+                    if id_map[resource["id"]]["managed-by-script"]:
+                        id_map[resource["id"]].update(source)
                 else:
                     new = {
                         "name": feed_name
